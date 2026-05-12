@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>НеоТекХимия — поставщик нефтехимии для добычи, нефтебаз и топливной инфраструктуры</title>
+  <meta name="description" content="НеоТекХимия — B2B-поставщик нефтехимии для добычи, нефтебаз и топливной инфраструктуры." />
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --color-bg: #f5f3ef;
+      --color-surface: #fbfaf7;
+      --color-surface-2: #f0ede7;
+      --color-border: #d8d1c7;
+      --color-text: #1f2328;
+      --color-text-muted: #646d76;
+      --color-text-inverse: #f7f8fa;
+      --color-primary: #0b5f66;
+      --color-primary-hover: #08484e;
+      --color-highlight: #d8e4e4;
+      --color-accent: #8d5b2a;
+      --shadow-sm: 0 1px 2px rgba(20,24,28,.06);
+      --shadow-md: 0 10px 30px rgba(20,24,28,.08);
+      --radius-sm: .5rem; --radius-md: .875rem; --radius-lg: 1.25rem; --radius-xl: 1.5rem; --radius-full: 9999px;
+      --font-body: 'General Sans', Inter, sans-serif;
+      --font-display: 'Cabinet Grotesk', Inter, sans-serif;
+      --content: 1180px;
+    }
+    [data-theme="dark"] {
+      --color-bg: #121516;
+      --color-surface: #181c1d;
+      --color-surface-2: #202628;
+      --color-border: #313839;
+      --color-text: #edf1f2;
+      --color-text-muted: #a8b0b3;
+      --color-text-inverse: #0f1415;
+      --color-primary: #63a5ad;
+      --color-primary-hover: #8dc0c6;
+      --color-highlight: #243234;
+      --color-accent: #c39258;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.25);
+      --shadow-md: 0 12px 36px rgba(0,0,0,.38);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);font-size:var(--text-base);background:var(--color-bg);color:var(--color-text);line-height:1.6}
+    img,svg{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+    .container{width:min(calc(100% - 2rem), var(--content));margin-inline:auto}
+    .skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:1rem;top:1rem;background:var(--color-primary);color:var(--color-text-inverse);padding:.75rem 1rem;border-radius:var(--radius-sm);z-index:50}
+    header{position:sticky;top:0;z-index:40;background:color-mix(in srgb, var(--color-bg) 88%, transparent);backdrop-filter: blur(12px);border-bottom:1px solid color-mix(in srgb, var(--color-text) 12%, transparent)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:1rem 0}
+    .brand{display:flex;align-items:center;gap:.9rem;font-weight:700}
+    .brand-mark{width:40px;height:40px;color:var(--color-primary)}
+    .brand-name{font-family:var(--font-display);font-size:1.1rem;letter-spacing:.02em}
+    .nav-links{display:flex;gap:1rem;color:var(--color-text-muted);font-size:var(--text-sm);flex-wrap:wrap}
+    .nav-actions{display:flex;gap:.75rem;align-items:center}
+    .theme-toggle,.ghost-btn,.primary-btn{min-height:44px;padding:.8rem 1rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;justify-content:center;gap:.5rem;transition:.18s ease}
+    .theme-toggle,.ghost-btn{border:1px solid color-mix(in srgb, var(--color-text) 12%, transparent);background:var(--color-surface)}
+    .primary-btn{background:var(--color-primary);color:var(--color-text-inverse);box-shadow:var(--shadow-sm)}
+    .primary-btn:hover{background:var(--color-primary-hover)}
+    .ghost-btn:hover,.theme-toggle:hover{background:var(--color-surface-2)}
+    .hero{padding:clamp(2rem, 5vw, 4rem) 0 2.5rem}
+    .hero-shell{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--space-8);align-items:center}
+    .eyebrow{display:inline-flex;gap:.6rem;align-items:center;padding:.45rem .8rem;border-radius:var(--radius-full);background:var(--color-highlight);color:var(--color-primary);font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+    h1{font-family:var(--font-display);font-size:var(--text-2xl);line-height:1;max-width:12ch;margin:1rem 0 1.25rem}
+    .lead{max-width:62ch;color:var(--color-text-muted)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1.5rem}
+    .hero-visual{position:relative;border-radius:var(--radius-xl);overflow:hidden;min-height:420px;box-shadow:var(--shadow-md);border:1px solid color-mix(in srgb, var(--color-text) 10%, transparent);background:var(--color-surface)}
+    .hero-visual img{width:100%;height:100%;object-fit:cover}
+    .hero-overlay{position:absolute;inset:auto 1rem 1rem 1rem;background:color-mix(in srgb, var(--color-surface) 82%, transparent);backdrop-filter:blur(8px);border:1px solid color-mix(in srgb, var(--color-text) 10%, transparent);border-radius:var(--radius-lg);padding:1rem 1.1rem}
+    .hero-overlay strong{display:block;font-family:var(--font-display);font-size:1.05rem;margin-bottom:.25rem}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--color-border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md)}
+    .stat{background:var(--color-surface);padding:1.2rem}
+    .stat strong{display:block;font-family:var(--font-display);font-size:1.65rem;line-height:1.05;margin-bottom:.35rem}
+    .stat span{color:var(--color-text-muted);font-size:var(--text-sm)}
+    .panel{background:linear-gradient(180deg,var(--color-surface),var(--color-surface-2));border:1px solid color-mix(in srgb, var(--color-text) 10%, transparent);border-radius:var(--radius-lg);box-shadow:var(--shadow-md)}
+    .section{padding:clamp(2.5rem, 5vw, 5rem) 0}
+    .section-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:1.25rem}
+    .section-head p{max-width:56ch;color:var(--color-text-muted)}
+    .grid-3,.grid-2{display:grid;gap:1rem}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:var(--color-surface);border:1px solid color-mix(in srgb, var(--color-text) 10%, transparent);border-radius:var(--radius-lg);padding:1.25rem;box-shadow:var(--shadow-sm)}
+    .card h2,.card h3,.section h2{font-family:var(--font-display);font-size:var(--text-xl);line-height:1.05}
+    .card h3{font-size:var(--text-lg);margin-bottom:.6rem}
+    .card p,.card li,.muted{color:var(--color-text-muted)}
+    .tag-row{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.9rem}
+    .tag{padding:.4rem .7rem;border-radius:var(--radius-full);background:var(--color-surface-2);font-size:var(--text-xs);color:var(--color-text-muted);border:1px solid color-mix(in srgb, var(--color-text) 8%, transparent)}
+    .process{display:grid;gap:1px;background:var(--color-border);border-radius:var(--radius-lg);overflow:hidden}
+    .process-step{background:var(--color-surface);padding:1.1rem 1.2rem;display:grid;grid-template-columns:56px 1fr;gap:1rem;align-items:start}
+    .step-no{width:56px;height:56px;border-radius:16px;background:var(--color-highlight);color:var(--color-primary);display:flex;align-items:center;justify-content:center;font-weight:800}
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:1rem}
+    .contact-list{display:grid;gap:.8rem;margin-top:1rem}
+    .contact-list li{list-style:none;padding:.85rem 0;border-bottom:1px solid color-mix(in srgb, var(--color-text) 10%, transparent)}
+    footer{padding:2rem 0 3rem;color:var(--color-text-muted)}
+    .footer-box{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding-top:1.25rem;border-top:1px solid color-mix(in srgb, var(--color-text) 10%, transparent)}
+    .small{font-size:var(--text-sm)}
+    @media (max-width: 980px){
+      .hero-shell,.contact,.grid-3,.grid-2{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .section-head,.footer-box,.nav{align-items:flex-start}
+      .nav{flex-wrap:wrap}
+      .nav-links{order:3;width:100%;overflow:auto;padding-bottom:.25rem}
+      h1{max-width:14ch}
+      .hero-visual{min-height:300px}
+    }
+    @media (max-width: 640px){
+      .container{width:min(calc(100% - 1rem), var(--content))}
+      .hero-actions,.nav-actions{width:100%;flex-wrap:wrap}
+      .primary-btn,.ghost-btn{flex:1 1 220px}
+      .process-step{grid-template-columns:1fr}
+      .step-no{width:48px;height:48px}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержанию</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="НеоТекХимия — на главную">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M12 47V16h8l19 23V16h13v31h-8L25 24v23H12Z" fill="currentColor"/>
+          <path d="M47 12h5v40h-5" stroke="currentColor" stroke-width="2" opacity=".4"/>
+        </svg>
+        <div>
+          <div class="brand-name">НеоТекХимия</div>
+          <div class="small muted">Нефтехимия для добычи, нефтебаз и топлива</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Разделы сайта">
+        <a href="#products">Продукты</a>
+        <a href="#industries">Отрасли</a>
+        <a href="#supply">Поставка</a>
+        <a href="#quality">Контроль качества</a>
+        <a href="#documents">Документы</a>
+        <a href="#lab">Лаборатория</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a class="ghost-btn" href="#contacts">Запросить спецификацию</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero container" id="top">
+      <div class="hero-shell">
+        <div>
+          <div class="eyebrow">B2B-поставки по промышленным направлениям</div>
+          <h1>Поставщик нефтехимии для добычи, нефтебаз и топливной инфраструктуры</h1>
+          <p class="lead">НеоТекХимия поставляет решения для upstream и downstream-сегментов: буровые растворы, эмульгаторы, ПАВ, ингибиторы, деэмульгаторы, а также присадки для бензина и дизельного топлива. Работа строится вокруг прикладных задач клиента, требований к документации и согласованного формата внедрения.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#contacts">Обсудить задачу</a>
+            <a class="ghost-btn" href="#products">Смотреть продуктовые группы</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/34b13b5a-eabf-4fb2-936e-4cd812179ab2.png" alt="Индустриальная сцена с резервуарами, трубопроводами и лабораторной химией" width="1600" height="900" loading="lazy" />
+          <div class="hero-overlay">
+            <strong>Технический фокус</strong>
+            <div class="muted small">Подбор продукта, документация, пилот и сопровождение внедрения под производственную задачу.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section" aria-label="Ключевые показатели">
+      <div class="stats">
+        <div class="stat"><strong>6</strong><span>Продуктовых направлений в работе с добычей и топливом</span></div>
+        <div class="stat"><strong>48 ч</strong><span>Типовой срок первичной технической проработки запроса</span></div>
+        <div class="stat"><strong>B2B</strong><span>Формат взаимодействия с промышленными и инфраструктурными клиентами</span></div>
+      </div>
+    </section>
+
+    <section class="container section" id="products">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Продукты</div>
+          <h2>Продуктовые группы</h2>
+        </div>
+        <p>Портфель собран под прикладные задачи заказчиков: от добычи и подготовки сырья до улучшения эксплуатационных характеристик топлива и сопровождения пилотных внедрений.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Химия для бурения</h3>
+          <p>Решения для рецептур буровых растворов, стабилизации систем, контроля реологии и повышения устойчивости в сложных геологических условиях.</p>
+          <div class="tag-row"><span class="tag">Буровые растворы</span><span class="tag">ПАВ</span><span class="tag">Регуляторы</span></div>
+        </article>
+        <article class="card">
+          <h3>Эмульгаторы и деэмульгаторы</h3>
+          <p>Продукты для upstream и подготовки сырья: работа с эмульсиями, разделение фаз, улучшение стабильности процессов на промысловых и промежуточных объектах.</p>
+          <div class="tag-row"><span class="tag">Эмульгаторы</span><span class="tag">Деэмульгаторы</span><span class="tag">Подготовка сырья</span></div>
+        </article>
+        <article class="card">
+          <h3>Топливные присадки</h3>
+          <p>Многофункциональные пакеты для бензина и дизеля, решения для улучшения моющих, низкотемпературных и эксплуатационных характеристик топлива.</p>
+          <div class="tag-row"><span class="tag">МФП</span><span class="tag">Дизель</span><span class="tag">Топливная инфраструктура</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="industries">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Отрасли</div>
+          <h2>С кем работаем</h2>
+        </div>
+        <p>Фокус — на клиентах, которым важны техническая коммуникация, стабильность снабжения и аккуратная работа с требованиями службы качества, эксплуатации и закупки.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Добывающие компании и сервис</h3>
+          <ul class="contact-list">
+            <li>Поставки для буровых и промысловых подразделений.</li>
+            <li>Подбор продукта под задачу, а не только по каталожной позиции.</li>
+            <li>Сопровождение опытно‑промышленных применений.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Нефтебазы, трейдеры, сети АЗС</h3>
+          <ul class="contact-list">
+            <li>Присадки и сопутствующая химия для бензина и дизеля.</li>
+            <li>Работа с независимыми сетями и региональными операторами.</li>
+            <li>Подготовка пилотных партий и отработка условий масштабирования.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="supply">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Поставка</div>
+          <h2>Как организуем работу</h2>
+        </div>
+        <p>Процесс построен вокруг технической проработки задачи и понятных сроков: сначала уточнение параметров применения, затем подбор решения, после — согласование формата поставки и тестового этапа.</p>
+      </div>
+      <div class="process panel">
+        <div class="process-step"><div class="step-no">01</div><div><h3>Технический бриф</h3><p>Уточняем участок применения, специфику топлива или процесса, требования к документам и ограничения по логистике.</p></div></div>
+        <div class="process-step"><div class="step-no">02</div><div><h3>Подбор решения</h3><p>Предлагаем базовый продукт или комбинированную схему поставки, если задача требует сборки из нескольких компонентов.</p></div></div>
+        <div class="process-step"><div class="step-no">03</div><div><h3>Пилот и оценка</h3><p>Организуем тестовую поставку, фиксируем формат оценки результата и критерии перехода к регулярной работе.</p></div></div>
+      </div>
+    </section>
+
+    <section class="container section" id="quality">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Качество</div>
+          <h2>Контроль и документация</h2>
+        </div>
+        <p>По запросу готовим пакет документов под тип клиента и формат ввода продукта. Для пилотов заранее согласуем, какие показатели считаются достаточными для перехода к следующему этапу.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Технические паспорта</h3>
+          <p>Спецификации, диапазоны показателей, рекомендации по применению и ограничения по совместимости.</p>
+        </article>
+        <article class="card">
+          <h3>Протоколы и сопровождение</h3>
+          <p>Согласование набора документов под конкретный контур: добыча, нефтебаза, логистика или розничное топливо.</p>
+        </article>
+        <article class="card">
+          <h3>Работа с техническим контуром</h3>
+          <p>Взаимодействуем с ответственными за закупку, технологию и внедрение, чтобы согласовать продукт, документацию и формат оценки результата.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="documents">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Документы</div>
+          <h2>Пакет документов под задачу клиента</h2>
+        </div>
+        <p>Комплект согласовывается в зависимости от участка применения, требований службы качества и формата пилота. На раннем этапе обычно достаточно базового технического пакета.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Базовый пакет</h3>
+          <p>Техническое описание продукта, спецификация, рекомендации по применению и условия хранения/транспортировки.</p>
+        </article>
+        <article class="card">
+          <h3>Документы качества</h3>
+          <p>Паспорта качества, протоколы испытаний, сведения по типовым показателям и сопроводительная документация под отгрузку.</p>
+        </article>
+        <article class="card">
+          <h3>Документы под пилот</h3>
+          <p>Согласование контрольных показателей, критериев оценки результата и перечня материалов, необходимых для тестового ввода.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="lab">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Лабораторное сопровождение</div>
+          <h2>Поддержка на этапе проверки и внедрения</h2>
+        </div>
+        <p>Для присадок и специализированной нефтехимии важно заранее согласовать, какие показатели проверяются, кто их фиксирует и какой результат считается достаточным для перехода к регулярной поставке.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>До ввода продукта</h3>
+          <ul class="contact-list">
+            <li>Сверка исходных требований клиента.</li>
+            <li>Подбор параметров для лабораторной и эксплуатационной оценки.</li>
+            <li>Согласование набора документов и тестового сценария.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Во время пилота</h3>
+          <ul class="contact-list">
+            <li>Консультации по применению и интерпретации результатов.</li>
+            <li>Поддержка по корректировке дозировок и формата теста.</li>
+            <li>Подготовка рекомендаций для масштабирования поставки.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="contacts">
+      <div class="contact">
+        <div class="card">
+          <div class="eyebrow">Контакты</div>
+          <h2 style="margin-top:1rem">Обсудить поставку или пилот</h2>
+          <p class="muted" style="margin-top:.9rem">Для первичной проработки достаточно краткого описания задачи, области применения, желаемого горизонта запуска и требований к документации.</p>
+          <ul class="contact-list">
+            <li><strong>E-mail:</strong> inquiry@neotekhim.ru</li>
+          </ul>
+        </div>
+        <aside class="card">
+          <h3>Что указать в запросе</h3>
+          <ul class="contact-list">
+            <li>Тип продукта или задача применения.</li>
+            <li>Регион, объем и желаемый срок запуска.</li>
+            <li>Нужен ли пилот, лабораторная часть или выездное сопровождение.</li>
+            <li>Есть ли ограничения по происхождению компонентов и формату поставки.</li>
+          </ul>
+          <div class="hero-actions" style="margin-top:1rem">
+            <a class="primary-btn" href="mailto:inquiry@neotekhim.ru">Отправить запрос</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footer-box small">
+      <div>© НеоТекХимия, 2026. Поставки нефтехимии для промышленных клиентов.</div>
+      <div>B2B‑формат работы</div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const btn = document.querySelector('[data-theme-toggle]');
+      const root = document.documentElement;
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+      const render = () => {
+        btn.innerHTML = theme === 'dark'
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      };
+      render();
+      btn.addEventListener('click', function(){
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        render();
+      });
+    })();
+  </script>
+</body>
+</html>
